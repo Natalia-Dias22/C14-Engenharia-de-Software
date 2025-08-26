@@ -2,38 +2,37 @@ package br.com.exemplo;
 
 import java.util.List;
 import java.util.ArrayList;
-
+import java.util.Scanner;
 import com.google.gson.*;
-
 
 public class Main {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         List<Pessoa> pessoas = new ArrayList<>();
-        pessoas.add(new Pessoa("Natalia", 22));
-        pessoas.add(new Pessoa("João", 25));
 
-        //Criar objeto Gson com configuração de Pretty Print, (fica bonitinho)
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        System.out.print("Quantas pessoas deseja cadastrar? ");
+        int qtd = sc.nextInt();
+        sc.nextLine();
 
-        String jsonLista = gson.toJson(pessoas);
-        System.out.println("Lista em JSON: " + jsonLista);
+        for (int i = 0; i < qtd; i++) {
+            System.out.println("\nPessoa " + (i + 1) + ":");
 
+            System.out.print("Nome: ");
+            String nome = sc.nextLine();
 
-        //Alterando, usando uma classe de GSON, que representa um objeto JSON
+            System.out.print("Idade: ");
+            int idade = sc.nextInt();
+            sc.nextLine();
 
-        // Converter string JSON para JsonArray
-        JsonArray jsonArray = JsonParser.parseString(jsonLista).getAsJsonArray();
+            pessoas.add(new Pessoa(nome, idade));
+        }
 
-        // Pegar o primeiro elemento da lista
-        JsonElement primeiroElemento = jsonArray.get(0);
+        PessoaService service = new PessoaService();
 
-        // Transformar em JsonObject
-        JsonObject obj = primeiroElemento.getAsJsonObject();
+        String jsonLista = service.converterParaJson(pessoas);
+        System.out.println("\nLista em JSON:\n" + jsonLista);
 
-        // Alterar campos
-        obj.addProperty("idade", 30); // altera a idade
-        obj.addProperty("cidade", "Belo Horizonte"); // adiciona um novo campo
-
+        JsonObject obj = service.alterarPrimeiro(jsonLista);
         System.out.println("\nJSON do primeiro objeto depois da alteração:\n" + obj);
 
     }
