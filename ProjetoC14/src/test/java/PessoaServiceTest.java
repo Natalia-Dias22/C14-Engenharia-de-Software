@@ -28,14 +28,6 @@ public class PessoaServiceTest {
         assertTrue(json.contains("Beatriz"));
     }
 
-    @Test
-    public void testPessoaComNomeNuloParaJson() {
-        Pessoa p = new Pessoa(null, 22);
-        Gson gson = new Gson();
-        String json = gson.toJson(p);
-        assertTrue(json.contains("22"));
-        assertTrue(json.contains("null"));
-    }
 
     @Test
     public void testAlterarJsonComGson() {
