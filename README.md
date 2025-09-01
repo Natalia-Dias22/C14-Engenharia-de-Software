@@ -76,3 +76,11 @@ Se você está compilando manualmente com Java:
 
 javac -cp .:junit-5.10.0.jar:hamcrest-core-1.3.jar src/test/java/br/com/exemplo/*.java
 java -cp .:junit-5.10.0.jar:hamcrest-core-1.3.jar org.junit.runner.JUnitCore br.com.exemplo.Pess
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Erro de teste:
+
+java: cannot find symbol
+  symbol:   variable pessoa
+  location: class br.com.exemplo.Main
