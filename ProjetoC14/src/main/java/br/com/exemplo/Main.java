@@ -34,7 +34,7 @@ public class Main {
             } while (idade < 0);
 
             // Adiciona a pessoa à lista
-            pessoa.add(new Pessoa(nome, idade));
+            pessoas.add(new Pessoa(nome, idade));
         }
 
         // Converte a lista em JSON
