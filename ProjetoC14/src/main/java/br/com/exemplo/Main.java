@@ -8,7 +8,7 @@ import com.google.gson.*;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        List<Pessoa> pessoas = new ArrayList<>();
+        List<Pessoa> pessoa = new ArrayList<>();
 
         System.out.print("Quantas pessoas deseja cadastrar? ");
         int qtd = sc.nextInt();
@@ -24,12 +24,12 @@ public class Main {
             int idade = sc.nextInt();
             sc.nextLine();
 
-            pessoas.add(new Pessoa(nome, idade));
+            pessoa.add(new Pessoa(nome, idade));
         }
 
         PessoaService service = new PessoaService();
 
-        String jsonLista = service.converterParaJson(pessoas);
+        String jsonLista = service.converterParaJson(pessoa);
         System.out.println("\nLista em JSON:\n" + jsonLista);
 
         JsonObject obj = service.alterarPrimeiro(jsonLista);

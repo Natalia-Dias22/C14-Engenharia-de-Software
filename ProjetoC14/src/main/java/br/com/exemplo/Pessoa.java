@@ -2,8 +2,8 @@ package br.com.exemplo;
 
 public class Pessoa {
 
-    String nome;
-    int idade;
+    public String nome;
+    public int idade;
 
     public Pessoa(String nome, int idade) {
         this.nome = nome;

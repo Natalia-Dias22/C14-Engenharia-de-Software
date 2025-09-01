@@ -4,6 +4,7 @@ import java.util.List;
 import com.google.gson.*;
 
 public class PessoaService {
+    List<Pessoa> pessoa;
 
     // Converte lista de pessoas para JSON
     public String converterParaJson(List<Pessoa> pessoas) {
