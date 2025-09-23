@@ -1,3 +1,6 @@
+[![Java CI with Maven](https://github.com/Natalia-Dias22/C14-Engenharia-de-Software/actions/workflows/ci.yml/badge.svg)](https://github.com/Natalia-Dias22/C14-Engenharia-de-Software/actions/workflows/ci.yml)
+
+
 # C14-Engenharia-de-Software
 Códigos feitos na aula de Engenharia de Software.
  Esse projeto em específico, se trata de um codigo simples em JAVA, usando a dependência GSON, onde transformamos os objetos JSON.
@@ -78,9 +81,4 @@ javac -cp .:junit-5.10.0.jar:hamcrest-core-1.3.jar src/test/java/br/com/exemplo/
 java -cp .:junit-5.10.0.jar:hamcrest-core-1.3.jar org.junit.runner.JUnitCore br.com.exemplo.Pess
 
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Erro de teste:
 
-java: cannot find symbol
-  symbol:   variable pessoa
-  location: class br.com.exemplo.Main
