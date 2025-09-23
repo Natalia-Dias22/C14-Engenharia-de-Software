@@ -26,7 +26,7 @@ jobs:
         run: mvn clean install
 
       - name: Upload JAR artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: my-app-jar
           path: target/*.jar
@@ -50,7 +50,7 @@ jobs:
         run: mvn test
 
       - name: Upload Test Reports
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: test-reports
           path: target/surefire-reports/
