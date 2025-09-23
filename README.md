@@ -1,6 +1,5 @@
 [![Java CI with Maven](https://github.com/Natalia-Dias22/C14-Engenharia-de-Software/actions/workflows/ci.yml/badge.svg)](https://github.com/Natalia-Dias22/C14-Engenharia-de-Software/actions/workflows/ci.yml)
 
-
 # C14-Engenharia-de-Software
 Códigos feitos na aula de Engenharia de Software.
  Esse projeto em específico, se trata de um codigo simples em JAVA, usando a dependência GSON, onde transformamos os objetos JSON.
