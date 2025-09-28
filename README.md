@@ -1,9 +1,20 @@
 [![Java CI with Maven](https://github.com/Natalia-Dias22/C14-Engenharia-de-Software/actions/workflows/ci.yml/badge.svg)](https://github.com/Natalia-Dias22/C14-Engenharia-de-Software/actions/workflows/ci.yml)
 
 # C14-Engenharia-de-Software
+
 Códigos feitos na aula de Engenharia de Software.
- Esse projeto em específico, se trata de um codigo simples em JAVA, usando a dependência GSON, onde transformamos os objetos JSON.
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Esse projeto em específico, se trata de um codigo simples em JAVA, usando a dependência GSON, onde transformamos os objetos JSON.
+
+---
+
+# Nome dos contribuintes:
+
+### 1. Kauã Moreira Batista
+
+### 2. Natália Aparecida Dias Jorge
+
+## ATENÇÃO: Para visualizar o código fonte, vá para a branch [staging](https://github.com/Natalia-Dias22/C14-Engenharia-de-Software/tree/staging)
+
 Projeto JSON com Testes JUnit
 
 Este projeto em Java tem como objetivo manipular objetos JSON e garantir a integridade da aplicação através de testes unitários com JUnit. Ele demonstra como criar, ler e validar objetos JSON de forma prática e testável.
@@ -17,15 +28,15 @@ Maven (para gerenciamento de dependências, opcional)
 Estrutura do Projeto
 src/
 ├── main/
-│   └── java/
-│       └── br/com/exemplo/
-│           ├── Pessoa.java
-│           └── PessoaService.java
+│ └── java/
+│ └── br/com/exemplo/
+│ ├── Pessoa.java
+│ └── PessoaService.java
 └── test/
-    └── java/
-        └── br/com/exemplo/
-            ├── PessoaTest.java
-            └── PessoaServiceTest.java
+└── java/
+└── br/com/exemplo/
+├── PessoaTest.java
+└── PessoaServiceTest.java
 
 Funcionalidades
 
@@ -38,9 +49,9 @@ Exemplo de Uso
 import com.google.gson.Gson;
 
 public class Main {
-    public static void main(String[] args) {
-        Pessoa pessoa = new Pessoa("Natalia", 19);
-        Gson gson = new Gson();
+public static void main(String[] args) {
+Pessoa pessoa = new Pessoa("Natalia", 19);
+Gson gson = new Gson();
 
         // Convertendo objeto para JSON
         String json = gson.toJson(pessoa);
@@ -50,6 +61,7 @@ public class Main {
         Pessoa pessoa2 = gson.fromJson(json, Pessoa.class);
         System.out.println(pessoa2.getNome());
     }
+
 }
 
 Testes Unitários
@@ -60,24 +72,21 @@ Exemplo de teste:
 
 @Test
 public void testPessoaComNomeNuloParaJson() {
-    Pessoa p = new Pessoa(null, 22);
-    Gson gson = new Gson();
-    String json = gson.toJson(p);
+Pessoa p = new Pessoa(null, 22);
+Gson gson = new Gson();
+String json = gson.toJson(p);
 
     // Verifica se os valores estão presentes no JSON
     assertTrue(json.contains("22"));
     assertTrue(json.contains("null"));
+
 }
 
 Executando os testes
 
 -mvn test
 
-
 Se você está compilando manualmente com Java:
 
-javac -cp .:junit-5.10.0.jar:hamcrest-core-1.3.jar src/test/java/br/com/exemplo/*.java
+javac -cp .:junit-5.10.0.jar:hamcrest-core-1.3.jar src/test/java/br/com/exemplo/\*.java
 java -cp .:junit-5.10.0.jar:hamcrest-core-1.3.jar org.junit.runner.JUnitCore br.com.exemplo.Pess
-
-
-
